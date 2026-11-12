@@ -14,6 +14,12 @@
   <a href="LICENSE">MIT License</a>
 </p>
 
+<p align="center">
+  <a href="https://github.com/Hondomachi-591/cockpit-tsi-theme/actions/workflows/ci.yml">
+    <img src="https://github.com/Hondomachi-591/cockpit-tsi-theme/actions/workflows/ci.yml/badge.svg" alt="CI">
+  </a>
+</p>
+
 ![Cockpit services page in dark mode](docs/images/services-dark.png)
 
 ## 简体中文
