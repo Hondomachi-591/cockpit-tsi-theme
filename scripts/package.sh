@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+ROOT=$(CDPATH='' cd -- "$(dirname -- "$0")/.." && pwd)
 VERSION=dev
 if [ -f "$ROOT/VERSION" ]; then
     IFS= read -r VERSION < "$ROOT/VERSION"

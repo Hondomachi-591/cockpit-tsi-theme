@@ -9,7 +9,7 @@ BACKUP_DIR="/var/lib/cockpit-tsi-theme/originals"
 SYSTEM_SCRIPT="/usr/local/sbin/cockpit-tsi-theme"
 APT_HOOK="/etc/apt/apt.conf.d/99cockpit-tsi-theme"
 THEME_TAG='<link rel="stylesheet" href="/cockpit/static/tspi-theme.css" data-tsi-theme="1">'
-HERE=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+HERE=$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd)
 VERSION=dev
 if [ -f "$HERE/VERSION" ]; then
     IFS= read -r VERSION < "$HERE/VERSION"
