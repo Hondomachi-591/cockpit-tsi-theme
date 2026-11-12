@@ -85,7 +85,7 @@ sudo systemctl enable --now cockpit.socket
 ### 安装主题
 
 ```bash
-git clone https://github.com/<owner>/cockpit-tsi-theme.git
+git clone https://github.com/Hondomachi-591/cockpit-tsi-theme.git
 cd cockpit-tsi-theme
 sudo sh install.sh install
 ```
