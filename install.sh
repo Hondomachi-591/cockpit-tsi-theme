@@ -2,7 +2,6 @@
 set -eu
 
 ACTION="${1:-install}"
-VERSION=$(cat "$(dirname -- "$0")/VERSION" 2>/dev/null || printf 'dev')
 COCKPIT_ROOT="${COCKPIT_DATA_DIR:-/usr/share/cockpit}"
 THEME_DIR="$COCKPIT_ROOT/static"
 THEME_FILE="$THEME_DIR/tspi-theme.css"
@@ -11,6 +10,10 @@ SYSTEM_SCRIPT="/usr/local/sbin/cockpit-tsi-theme"
 APT_HOOK="/etc/apt/apt.conf.d/99cockpit-tsi-theme"
 THEME_TAG='<link rel="stylesheet" href="/cockpit/static/tspi-theme.css" data-tsi-theme="1">'
 HERE=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+VERSION=dev
+if [ -f "$HERE/VERSION" ]; then
+    IFS= read -r VERSION < "$HERE/VERSION"
+fi
 
 die() {
     printf 'error: %s\n' "$*" >&2
